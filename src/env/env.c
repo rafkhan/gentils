@@ -97,14 +97,17 @@ typedef struct {
 ArgList ArgInfo[]= {
         { .name="--version", .function=&print_version },
         { .name="--help",    .function=&print_usage   },
-        { .name="--unset",   .function=&unset_env     },
-        { .name="-u",        .function=&unset_env     },
+
         { .name="-",                    .function=&ignore_env  },
         { .name="-i",                   .function=&ignore_env  },
         { .name="--ignore-environment", .function=&ignore_env  },
+
+        { .name="-u",        .function=&unset_env     },
+        { .name="--unset",   .function=&unset_env     },
         { .name="-0",        .function=&param_null  },
         { .name="--null",    .function=&param_null  },
-        { .name="",          .function=0               }
+
+        { .name=NULL,        .function=0               }
 };
 
 void handle_arguments(char const * const *argv)

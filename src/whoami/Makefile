@@ -3,7 +3,7 @@ CFLAGS= -Wall -g
 VERSION=1.0
 DATE=$(shell date)
 
-CC=clang
+CC=gcc
 CFLAGS= -Wall\
 		-DCOMPILE_TIME="\"$(DATE)\""\
 		-DVERSION="\"$(VERSION)\""
